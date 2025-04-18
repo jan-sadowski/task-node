@@ -24,5 +24,4 @@ app.MapControllers();
 
 // Uruchomienie aplikacji
 app.Run();
-
-// testsfdsf
+// dddd
