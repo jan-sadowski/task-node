@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "2JoOkLDvRUtzUHU4WMagIi+bn+54o492sN2v+QyOHPc=",
+  "Source": "TaskNode",
+  "BasePath": "_content/TaskNode",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
