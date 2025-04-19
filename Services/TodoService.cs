@@ -54,6 +54,6 @@ public class TodoService : ITodoService
         {
             _context.TodoItems.Remove(item);
             await _context.SaveChangesAsync();
-        }       
+        }
     }
 }

@@ -6,6 +6,8 @@
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/TaskNode.runtimeconfig.json
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/TaskNode.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/TaskNode.pdb
+/Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/AutoMapper.dll
+/Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Azure.Core.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Azure.Identity.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Humanizer.dll
@@ -22,6 +24,7 @@
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.InMemory.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.SqlServer.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
@@ -46,6 +49,9 @@
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Microsoft.SqlServer.Server.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Microsoft.Win32.SystemEvents.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Mono.TextTemplating.dll
+/Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/System.ClientModel.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/System.CodeDom.dll
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/System.Composition.AttributedModel.dll
@@ -147,6 +153,7 @@
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/obj/Debug/net9.0/TaskNode.csproj.CoreCompileInputs.cache
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/obj/Debug/net9.0/TaskNode.MvcApplicationPartsAssemblyInfo.cs
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/obj/Debug/net9.0/TaskNode.MvcApplicationPartsAssemblyInfo.cache
+/Users/jansadowski/RiderProjects/TaskNode/TaskNode/obj/Debug/net9.0/TaskNode.sourcelink.json
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/obj/Debug/net9.0/scopedcss/bundle/TaskNode.styles.css
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/obj/Debug/net9.0/staticwebassets.build.json
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/obj/Debug/net9.0/staticwebassets.development.json
@@ -163,7 +170,3 @@
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/obj/Debug/net9.0/TaskNode.pdb
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/obj/Debug/net9.0/TaskNode.genruntimeconfig.cache
 /Users/jansadowski/RiderProjects/TaskNode/TaskNode/obj/Debug/net9.0/ref/TaskNode.dll
-/Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.InMemory.dll
-/Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
-/Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-/Users/jansadowski/RiderProjects/TaskNode/TaskNode/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll

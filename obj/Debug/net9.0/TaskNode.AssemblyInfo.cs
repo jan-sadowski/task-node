@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskNode")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+773ca74c07f4b2898db83f2f58ba93d5e11cdd14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2fe4a4edd3460abf44e778d234056f6f786923a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskNode")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskNode")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

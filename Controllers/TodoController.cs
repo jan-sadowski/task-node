@@ -16,7 +16,7 @@ public class TodoController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllTodos()
+    public async Task<IActionResult> GetllTodos()
     {
         var items = await _todoService.GetAllAsync();
         return Ok(items);
