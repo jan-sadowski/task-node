@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using TaskNode.Dtos;
-using TaskNode.Models;
 using TaskNode.Services;
 
 namespace TaskNode.Controllers;
@@ -32,16 +31,18 @@ public class TodoController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateTodo([FromBody] TodoItemDto? item)
+    public async Task<IActionResult> CreateTodo([FromBody] TodoItemCreateDto? item)
     {
-        await _todoService.AddAsync(item);
-        return CreatedAtAction(nameof(GetTodoById), new { id = item.Id }, item); // Zmienione na GetTodoById
+        if (item == null) return BadRequest();
+
+        var created = await _todoService.AddAsync(item);
+        return CreatedAtAction(nameof(GetTodoById), new { id = created!.Id }, created);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateTodo(int id, [FromBody] TodoItemDto? item)
+    public async Task<IActionResult> UpdateTodo(int id, [FromBody] TodoItemUpdateDto? item)
     {
-        await _todoService.UpdateAsync(id, item);
+        if (item != null) await _todoService.UpdateAsync(id, item);
         return NoContent();
     } 
     

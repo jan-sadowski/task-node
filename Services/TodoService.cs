@@ -2,74 +2,50 @@ using Microsoft.EntityFrameworkCore;
 using TaskNode.Data;
 using TaskNode.Dtos;
 using TaskNode.Models;
+using AutoMapper;
 
 namespace TaskNode.Services;
 
 public class TodoService : ITodoService
 {
+    private readonly IMapper _mapper;
     private readonly TodoContext _context;
 
-    public TodoService(TodoContext context)
+    public TodoService(IMapper mapper, TodoContext context)
     {
+        _mapper = mapper;
         _context = context;
     }
 
     public async Task<List<TodoItemDto>> GetAllAsync()
     {
-        return await _context.TodoItems
-            .Select(item => new TodoItemDto
-            {
-                Id = item.Id,
-                Title = item.Title,
-                IsComplete = item.IsComplete
-            })
-            .ToListAsync();
+        var items = await _context.TodoItems.ToListAsync();
+        return _mapper.Map<List<TodoItemDto>>(items);
     }
 
     public async Task<TodoItemDto?> GetByIdAsync(int id)
     {
-        var item = await _context.TodoItems
-            .Where(t => t.Id == id)
-            .Select(i => new TodoItemDto
-            {
-                Id = i.Id,
-                Title = i.Title,
-                IsComplete = i.IsComplete
-            })
-            .FirstOrDefaultAsync();
-
-        return item;
+        var item = await _context.TodoItems.FindAsync(id);
+        return _mapper.Map<TodoItemDto>(item);
     }
 
-    public async Task AddAsync(TodoItemDto? itemDto)
+    public async Task<TodoItemDto?> AddAsync(TodoItemCreateDto? itemDto)
     {
-        if (itemDto != null)
+        var item = _mapper.Map<TodoItem>(itemDto);
+        _context.TodoItems.Add(item);
+        await _context.SaveChangesAsync();
+        return _mapper.Map<TodoItemDto>(item);
+    }
+    
+    public async Task UpdateAsync(int id, TodoItemUpdateDto? itemDto)
+    {
+        var item = await _context.TodoItems.FindAsync(id);
+        if (item != null)
         {
-            var item = new TodoItem
-            {
-                Title = itemDto.Title,
-                IsComplete = itemDto.IsComplete
-            };
-
-            _context.TodoItems.Add(item);
+            _mapper.Map(itemDto, item);
             await _context.SaveChangesAsync();
         }
-    }
-    
-    public async Task UpdateAsync(int id, TodoItemDto? itemDto)
-    {
-        var existing = await _context.TodoItems.FindAsync(id);
-    
-        if (existing == null) return;
-
-        if (itemDto != null)
-        {
-            existing.Title = itemDto.Title;
-            existing.IsComplete = itemDto.IsComplete;
-        }
-
-        await _context.SaveChangesAsync();
-    }
+    } 
     
     public async Task DeleteAsync(int id)
     {
@@ -78,6 +54,6 @@ public class TodoService : ITodoService
         {
             _context.TodoItems.Remove(item);
             await _context.SaveChangesAsync();
-        }
+        }       
     }
 }

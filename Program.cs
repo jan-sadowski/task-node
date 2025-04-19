@@ -1,26 +1,30 @@
 using Microsoft.EntityFrameworkCore;
 using TaskNode.Data;
+using TaskNode.Mapping;
 using TaskNode.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Zarejestruj DbContext
+// DbContext
 builder.Services.AddDbContext<TodoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Zarejestruj serwis ITodoService oraz jego implementację TodoService
+// Serwis ITodoService i jego implementacja TodoService
 builder.Services.AddScoped<ITodoService, TodoService>();
 
-// Dodaj kontrolery
+// Automapper
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+// Kontrolery
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// Konfiguracja Kestrela do obsługi HTTP i HTTPS
+// Obługa Http i Https
 app.UseHttpsRedirection();
 
 // Mapa kontrolerów
 app.MapControllers();
 
-// Uruchomienie aplikacji
+// Start aplikacji 
 app.Run();
